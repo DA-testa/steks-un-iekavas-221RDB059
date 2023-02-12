@@ -1,6 +1,6 @@
 def bracket_checker(text):
-    if text[0:5] == "I\r\n":
-        text = text[5:-1]
+    if text[0:5] == "I\\r\\n":
+        text = text[5:]
     stack = []
     for i in range(len(text)):
         if text[i] in OPENING_BRACKETS:
