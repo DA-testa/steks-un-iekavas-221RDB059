@@ -2,6 +2,8 @@ import os
 
 
 def bracket_checker(text):
+    # if text[0:5] == "I\\r\\n":
+    #     text = text[5:]
     stack = []
     for i in range(len(text)):
         if text[i] in OPENING_BRACKETS:
@@ -23,10 +25,7 @@ def bracket_checker(text):
 OPENING_BRACKETS = ('(', '[', '{')
 CLOSING_BRACKETS = (')', ']', '}')
 file_or_input = input()
-if file_or_input.lower() == "i":
-    text = input()
-    print(bracket_checker(text))
-elif file_or_input.lower() == "f":
+if file_or_input.lower() == "f":
     test_amount = len(os.listdir("test/"))
     good_tests = 0
     total_tests = 0
@@ -47,4 +46,5 @@ elif file_or_input.lower() == "f":
         i += 1
         print()
 else:
-    print("Unknown command")
+    text = input()
+    print(bracket_checker(text))
