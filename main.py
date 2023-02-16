@@ -48,3 +48,4 @@ if file_or_input.lower() == "f":
 else:
     text = input()
     print(bracket_checker(text))
+    
